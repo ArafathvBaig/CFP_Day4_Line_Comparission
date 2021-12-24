@@ -69,8 +69,10 @@ class LineComparission
     {
         if ($length1 == $length2) {
             echo "Both have Equal Length";
+        } elseif ($length1 > $length2) {
+            echo "Length1 is Greater than Length2";
         } else {
-            echo "Not equal";
+            echo "Length2 is Greater than Length1";
         }
     }
 }
