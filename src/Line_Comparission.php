@@ -56,10 +56,27 @@ class LineComparission
         $this->userInput();
         $length = sqrt($this->power(($this->x2 - $this->x1), 2) +
             $this->power(($this->y2 - $this->y1), 2));
+        echo "Length:: " . $length . "\n";
         return $length;
+    }
+
+    /**
+     * Function to check the equality of two lengths
+     * Passing length1 and length2 as parameters
+     * Prints if equal or not
+     */
+    function checkEquality($length1, $length2)
+    {
+        if ($length1 == $length2) {
+            echo "Both have Equal Length";
+        } else {
+            echo "Not equal";
+        }
     }
 }
 
 //creating object of LineComparison class
 $lineComparission = new LineComparission();
-echo "Length:: " . $lineComparission->calcLength();
+$length1 = $lineComparission->calcLength();
+$length2 = $lineComparission->calcLength();
+$lineComparission->checkEquality($length1, $length2);
